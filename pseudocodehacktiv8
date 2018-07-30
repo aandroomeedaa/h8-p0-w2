@@ -1,0 +1,50 @@
+1.
+
+READ and SAVE "massa benda(600(kg))"
+READ and SAVE "percepatan benda(2(m/s'))"
+COMPUTE "massa benda" divide by "percepatan benda"
+SAVE previous computation result as "ΣF(resultan gaya)"
+SHOW "ΣF(resultan gaya)"
+
+2.
+
+STORE "a=0"
+READ and SAVE "hitungtahun"
+COMPUTE "hitung tahun" mod by "4"
+UPDATE "a=result" 
+ IF "a" == 0 
+	DO 
+	  STORE "a=0"
+	  COMPUTE "hitungtahun" mod by "100"
+	  UPDATE "a=result"
+		IF ("a" == 0)
+			STORE "a=0"
+	  		COMPUTE "hitungtahun" mod by "400"
+			UPDATE "a=result"
+				IF ("a" == 0)	
+		  		SHOW  "tahun kabisat"	 
+				ELSE
+		  		SHOW  "bukan tahun kabisat"
+		ELSE
+		SHOW  "tahun kabisat"	
+ ELSE
+ 	SHOW "bukan tahun kabisat"
+
+3.
+
+STORE "baju=20"
+for(a=0 a++ a<20)
+"masukan baju"
+
+4.
+
+STORE "check = 0"
+STORE "student= 40"
+WHILE "check < student"
+	DO "check kuku"
+		IF "kuku pendek"
+		THEN SHOW "kuku kamu bagus"
+		"check + 1"
+		ELSE
+		THEN SHOW "kuku kamu bagus"
+		"check + 1"
